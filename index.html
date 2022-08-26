@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <title>Flex Form</title>
+</head>
+<body>
+  <section class="register-section">
+    <form class="register-form" action="#" method="get">
+      <article class="text-article">
+        <h1 class="form-heading">Register</h1>
+        <p>Create your account. It's free and only takes a minute.</p>
+      </article>
+      <div class="two-sides-div">
+        <label for="first-name">
+          <input class="input-style two-sides-input" id="first-name"
+          class="first-name-input"
+          placeholder="First Name"
+          pattern="^[A-Za-z]$"
+          autofocus/>
+        </label>
+        <label for="last-name">
+          <input class="input-style two-sides-input" id="last-name"
+          class="last-name-input"
+          placeholder="Last Name"
+          pattern="^[A-Za-z]$"/>
+        </label>
+      </div>
+      <div>
+        <label for="email">
+          <input class="input-style single-input" id="email"
+          class="email-input"
+          placeholder="Email"
+          pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"/>
+        </label>
+        <label for="password">
+          <input class="input-style single-input" id="password"
+          class="password-input"
+          placeholder="Password"
+          pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$"/>
+        </label>
+        <label for="confirm-password">
+          <input class="input-style single-input" id="confirm-password"
+          class="confirm-password"
+          placeholder="Confirm Password"
+          pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$"/>
+        </label>
+      </div>
+      <div>
+        <input id="privasy-policy" type="checkbox" name="to accept" value="true" class="checkbox"/>
+        <label for="privasy-policy">I accept the <a href="#" class="link">Terms of Use</a> & <a href="#" class="link">Privacy Policy</a> 
+        </label>
+      </div>
+      <button type="submit" class="button">Register Now</button>
+    </form>
+  </section>
+</body>
+</html>
