@@ -5,12 +5,9 @@
 }
 
 .register-section {
-  margin: 0 auto;
-  max-width: 500px;
-  margin-top: 20vh;
-  display: flex;
-  justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px; /* при флексах прибивает к левому краю */
+  margin: 20vh auto;
 }
 
 .text-article {
@@ -20,18 +17,39 @@
 }
 
 .form-heading {
-  display: flex;
+  /* display: flex; */
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 10px;
   align-items: center;
 }
 
-.form-heading::after,
+/* Горизонтальные линии ч-з позиционирование */
+.register-span {
+  position: relative;
+  padding: 10px; /* padding на правый псевдоэлемент не работает */
+}
+
+.register-span::before,
+.register-span::after {
+  content: '';
+  border: 1px solid rgb(128, 124, 124);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.register-span::before {
+  left: -100%;
+}
+
+/* Горизонтальные линии ч-з флексы */
+
+/* .form-heading::after,
 .form-heading::before {
   flex: 1;
   content: '';
-  border-bottom: 2px solid rgb(128, 124, 124);
+  border: 1px solid rgb(128, 124, 124);
 }
 .form-heading::after {
   margin-left: 20px;
@@ -41,11 +59,12 @@
 .form-heading::before {
   margin-right: 20px;
   left: 0;
-}
+} */
 
 .register-form {
   background: #eeeeee;
   border: 2px solid black;
+  border-radius: 10px;
   padding: 40px;
 }
 
@@ -56,8 +75,12 @@
 }
 .two-sides-div {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.two-sides-input {
+
 }
 
 .checkbox {
@@ -73,7 +96,7 @@
   background-color: rgb(15, 172, 62);
   color: #fff;
   border: none;
-  font-size: large;
+  font-size: 20px;
   font-weight: 800;
   padding: 10px;
   width: 100%;
