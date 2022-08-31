@@ -11,7 +11,7 @@
 }
 
 .text-article {
-  text-align: center;  
+  text-align: center;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -32,7 +32,7 @@
 
 .register-span::before,
 .register-span::after {
-  content: '';
+  content: "";
   border: 1px solid rgb(128, 124, 124);
   position: absolute;
   top: 50%;
@@ -79,10 +79,6 @@
   flex-flow: row wrap;
 }
 
-.two-sides-input {
-
-}
-
 .checkbox {
   margin: 10px;
 }
@@ -101,4 +97,10 @@
   padding: 10px;
   width: 100%;
   margin-top: 20px;
+}
+
+@media screen and (max-width:475px) {
+  .two-sides-div {
+    display: block;
+  }
 }
